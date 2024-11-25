@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비건 레시피 블로그</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
         header, nav {
             background-color: #0e5453;
@@ -12,25 +16,69 @@
             padding: 10px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
         }
+
         nav a {
             color: white;
             margin: 0 10px;
             text-decoration: none;
         }
-        search-bar {
+
+        .search-bar {
+            text-align: center;
             margin: 20px 0;
         }
+
+        .search-bar input {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #0e5453;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
         .content {
             width: 80%;
-            padding: 20px;
+            margin: 0 auto;
             background-color: #d0e7e144;
+            padding: 20px;
             border-radius: 8px;
         }
+
+        .recipe-card {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-card h3 {
+            margin-top: 0;
+        }
+
         .footer {
             margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #0e5453;
+            color: white;
         }
     </style>
 </head>
@@ -50,21 +98,22 @@
     </nav>
 
     <div class="container">
-   
+
+        <!-- 검색 바 -->
         <div class="search-bar">
             <input type="text" placeholder="레시피 검색">
             <button>검색</button>
         </div>
 
-        
+        <!-- 오늘의 추천 레시피 -->
         <div class="content">
             <h2>오늘의 추천 레시피: 비건 샌드위치</h2>
             <p>신선한 채소 섭취로 건강한 한 끼 만들어 보아요!</p>
             <h3>재료:</h3>
             <ul>
                 <li>비건 오트 빵 15cm 한 개</li>
-                <li>양상추21g </li>
-                <li>양파7g</li>
+                <li>양상추 21g</li>
+                <li>양파 7g</li>
                 <li>토마토 슬라이스 3개</li>
                 <li>오이 슬라이스 5개</li>
                 <li>할라피뇨 4개</li>
@@ -77,8 +126,54 @@
                 <li>소스까지 뿌려주면 완성!</li>
             </ol>
         </div>
+
+        <!-- 레시피 모음 -->
+        <div class="content" id="recipes">
+            <h2>레시피 모음</h2>
+
+            <!-- 레시피 카드 1 -->
+            <div class="recipe-card">
+                <h3>1. 아보카도 샐러드</h3>
+                <p>신선한 아보카도와 채소를 활용한 간단하고 건강한 샐러드!</p>
+                <h4>재료:</h4>
+                <ul>
+                    <li>아보카도 1개</li>
+                    <li>상추 50g</li>
+                    <li>토마토 1개</li>
+                    <li>올리브오일, 소금, 후추 약간</li>
+                </ul>
+            </div>
+
+            <!-- 레시피 카드 2 -->
+            <div class="recipe-card">
+                <h3>2. 비건 파스타</h3>
+                <p>신선한 토마토 소스로 만든 부드럽고 맛있는 비건 파스타.</p>
+                <h4>재료:</h4>
+                <ul>
+                    <li>비건 파스타 면 200g</li>
+                    <li>토마토 소스 100g</li>
+                    <li>바질, 마늘, 올리브 오일</li>
+                </ul>
+            </div>
+
+            <!-- 레시피 카드 3 -->
+            <div class="recipe-card">
+                <h3>3. 초코 바나나 스무디</h3>
+                <p>바나나와 코코아 가루로 만드는 부드럽고 달콤한 스무디.</p>
+                <h4>재료:</h4>
+                <ul>
+                    <li>바나나 2개</li>
+                    <li>코코아 파우더 2큰술</li>
+                    <li>아몬드 밀크 1컵</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
+    <footer class="footer">
+        © 2024 비건 레시피 블로그
+    </footer>
 
 </body>
 </html>
